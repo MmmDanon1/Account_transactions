@@ -9,12 +9,14 @@ def open_json(file_name):
 
     return data
 
-def sort_date(date):
+def sort_data(data):
     """
-    сортировка данных по дате
-    :return:отсортированный список по дате
+    сортировка данных
+    :return:отсортированный список данных
     """
-    pass
+    sort_data_list = [operation for operation in data if operation["state"] == "EXECUTED"]
+
+    return sort_data_list
 
 def mask_number_card(number_card):
     """
