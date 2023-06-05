@@ -1,10 +1,13 @@
 import json
-def open_json():
+def open_json(file_name):
     """
     открываем файл json
     :return: [{}]
     """
-    pass
+    with open(file_name, encoding='utf-8') as json_file:
+        data = json.load(json_file)
+
+    return data
 
 def sort_date(date):
     """
