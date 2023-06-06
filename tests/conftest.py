@@ -241,10 +241,10 @@ def fixture_sort_data():
 
 @pytest.fixture
 def fixture_number_card():
-  return "Счет 337215**********3763"
+  return "Счет 3372154183******3763"
 
 @pytest.fixture
-def sort_number_card():
+def sort_data_user():
   return [{
     "id": 894961746,
     "state": "EXECUTED",
@@ -260,5 +260,9 @@ def sort_number_card():
     "from": "Счет 33721541831646393763",
     "to": "Счет 68774571780974952778"
   }]
+
+@pytest.fixture
+def fixture_mask_number_score():
+  return "Счет **2778"
 
 
