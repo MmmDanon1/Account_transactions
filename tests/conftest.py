@@ -239,5 +239,26 @@ def fixture_sort_data():
   }
 ]
 
+@pytest.fixture
+def fixture_number_card():
+  return "Счет 337215**********3763"
+
+@pytest.fixture
+def sort_number_card():
+  return [{
+    "id": 894961746,
+    "state": "EXECUTED",
+    "date": "2019-08-04T20:17:25.443322",
+    "operationAmount": {
+      "amount": "2523.44",
+      "currency": {
+        "name": "руб.",
+        "code": "RUB"
+      }
+    },
+    "description": "Перевод со счета на счет",
+    "from": "Счет 33721541831646393763",
+    "to": "Счет 68774571780974952778"
+  }]
 
 
