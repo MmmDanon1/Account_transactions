@@ -2,7 +2,7 @@ import json
 def open_json(file_name):
     """
     открываем файл json
-    :return: [{}]
+    :return: список библиотек
     """
     with open(file_name, encoding='utf-8') as json_file:
         data = json.load(json_file)
@@ -41,7 +41,16 @@ def mask_number_score(number_score):
     :param number_score:
     :return: отсортированный номер счета
     """
-    pass
+    for number in number_score:
+        sort_number_score = number["to"]
+
+        sort_number_score_element = sort_number_score.split(" ")
+        mask_number_score = list(sort_number_score_element[1])
+        mask_number_score[-5] = "*"
+        mask_number_score[-6] = " *"
+        number_slice = mask_number_score[-6:]
+
+        return sort_number_score_element[0] + "".join(number_slice)
 
 
 
