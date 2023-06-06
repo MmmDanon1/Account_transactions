@@ -14,8 +14,6 @@ def sort_data(data):
     сортировка данных
     :return:отсортированный список данных
     """
-
-    # sort_data_list = [operation for operation in data if operation["state"] == "EXECUTED"]
     sort_data_list = []
     for operation in data:
         try:
@@ -54,7 +52,6 @@ def mask_number_score(number_score):
     :param number_score:
     :return: отсортированный номер счета
     """
-    # for number in number_score:
     try:
         sort_number_score = number_score["to"]
         sort_number_score_element = sort_number_score.split(" ")
