@@ -52,6 +52,20 @@ def mask_number_score(number_score):
 
         return sort_number_score_element[0] + "".join(number_slice)
 
+def sort_data_by_date(data):
+    """
+    сортирует входные данные по дате
+    :return: отсортированные данные по дате
+    """
+    date_obj = sorted(data, key=lambda x: x['date'], reverse=False)
+
+    return date_obj
+
+
+
+
+
+
 
 
 
