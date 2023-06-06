@@ -23,7 +23,17 @@ def mask_number_card(number_card):
     маскировка номеров карт
     :return:отсортированный номер карты
     """
-    pass
+    for number in number_card:
+        sort_numbers_card = number["from"]
+        mask = list(sort_numbers_card)
+        mask[-5] = "*"
+        mask[-6] = "*"
+        mask[-7] = "*"
+        mask[-8] = "*"
+        mask[-9] = "*"
+        mask[-10] = "*"
+
+        return("".join(mask))
 
 def mask_number_score(number_score):
     """
