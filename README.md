@@ -4,7 +4,7 @@
 Code for the "Account Transactions" widget
 The IT department of a large bank is making a new feature for the client's personal account. This is a widget that shows several recent successful banking transactions of the client. You have been entrusted to implement an algorithm that will prepare data for display in a new widget on the backend.
 
-# Implements a function that displays a list of the last 5 operations performed by the client in the format:
+Implements a function that displays a list of the last 5 operations performed by the client in the format:
 
 <transfer date> <translation description>
 <from where> -> <where>
