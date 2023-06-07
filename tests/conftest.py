@@ -80,6 +80,7 @@ def fixture_test_operations():
       }
     },
     "description": "Открытие вклада",
+    "from": "МИР 4878656377733856",
     "to": "Счет 12189246980267075758"
   },
   {
@@ -245,7 +246,7 @@ def fixture_number_card():
 
 @pytest.fixture
 def sort_data_user():
-  return [{
+  return {
     "id": 894961746,
     "state": "EXECUTED",
     "date": "2019-08-04T20:17:25.443322",
@@ -259,12 +260,13 @@ def sort_data_user():
     "description": "Перевод со счета на счет",
     "from": "Счет 33721541831646393763",
     "to": "Счет 68774571780974952778"
-  }]
+  }
 
 @pytest.fixture
 def fixture_mask_number_score():
   return "Счет **2778"
 
+@pytest.fixture
 def fixture_sort_data_by_date():
   return [{
     "id": 285353808,
