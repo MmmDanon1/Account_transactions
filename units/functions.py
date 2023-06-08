@@ -1,15 +1,15 @@
 import json
-def open_json(file_name):
+
+def open_json(file_name: list[dict]) -> list[dict]:
     """
     открываем файл json
     :return: список библиотек
     """
     with open(file_name, encoding='utf-8') as json_file:
         data = json.load(json_file)
-
     return data
 
-def sort_data(data):
+def sort_data(data: list[dict]) -> list[dict]:
     """
     сортировка данных
     :return:отсортированный список данных
@@ -21,32 +21,33 @@ def sort_data(data):
                 sort_data_list.append(operation)
         except:
             continue
-
     return sort_data_list
 
-def mask_number_card(number_card):
+def mask_number_card(number_card: dict) -> str:
     """
     маскировка номеров карт
     :return:отсортированный номер карты
     """
-    # for number in number_card:
     try:
        sort_numbers_card = number_card["from"]
        mask = list(sort_numbers_card)
-       mask[-5] = "*"
+       mask[-5] = "* "
        mask[-6] = "*"
        mask[-7] = "*"
-       mask[-8] = "*"
+       mask[-8] = " *"
        mask[-9] = "*"
        mask[-10] = "*"
-
+       mask[-11] = "*"
+       mask[-12] = " *"
+       mask[-13] = "*"
+       mask[-14] = "*"
+       mask[-15] = "*"
+       mask[-16] = " *"
        return ("".join(mask))
-
     except:
-
        return "Номер карты неизвестен"
 
-def mask_number_score(number_score):
+def mask_number_score(number_score: dict) -> str:
     """
     маскировка номера счета
     :param number_score:
@@ -59,20 +60,16 @@ def mask_number_score(number_score):
         mask_number_score[-5] = "*"
         mask_number_score[-6] = " *"
         number_slice = mask_number_score[-6:]
-
         return sort_number_score_element[0] + "".join(number_slice)
-
     except:
+        return "счет карты неизвестен"
 
-        return "Номер карты неизвестен"
-
-def sort_data_by_date(data):
+def sort_data_by_date(data: list[dict]) -> list[dict]:
     """
     сортирует входные данные по дате
     :return: отсортированные данные по дате
     """
-    date_obj = sorted(data, key=lambda x: x['date'], reverse=False)
-
+    date_obj = sorted(data, key=lambda x: x['date'], reverse=True)
     return date_obj
 
 
