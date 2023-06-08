@@ -1,5 +1,4 @@
 import os
-
 import pytest as pytest
 
 @pytest.fixture
@@ -242,7 +241,7 @@ def fixture_sort_data():
 
 @pytest.fixture
 def fixture_number_card():
-  return "Счет 3372154183******3763"
+  return "Счет 3372 **** **** **** 3763"
 
 @pytest.fixture
 def sort_data_user():
@@ -269,50 +268,6 @@ def fixture_mask_number_score():
 @pytest.fixture
 def fixture_sort_data_by_date():
   return [{
-    "id": 285353808,
-    "state": "EXECUTED",
-    "date": "2018-08-06T16:22:54.643491",
-    "operationAmount": {
-      "amount": "82946.19",
-      "currency": {
-        "name": "руб.",
-        "code": "RUB"
-      }
-    },
-    "description": "Открытие вклада",
-    "to": "Счет 12189246980267075758"
-  },
-    {
-    "id": 416017997,
-    "state": "EXECUTED",
-    "date": "2019-05-07T01:32:37.142797",
-    "operationAmount": {
-      "amount": "29033.65",
-      "currency": {
-        "name": "USD",
-        "code": "USD"
-      }
-    },
-    "description": "Перевод с карты на карту",
-    "from": "МИР 4878656375033856",
-    "to": "Maestro 6890749237669619"
-  },
-    {
-    "id": 894961746,
-    "state": "EXECUTED",
-    "date": "2019-08-04T20:17:25.443322",
-    "operationAmount": {
-      "amount": "2523.44",
-      "currency": {
-        "name": "руб.",
-        "code": "RUB"
-      }
-    },
-    "description": "Перевод со счета на счет",
-    "from": "Счет 33721541831646393763",
-    "to": "Счет 68774571780974952778"
-  },
-  {
     "id": 360577236,
     "state": "EXECUTED",
     "date": "2019-09-07T07:20:13.889610",
@@ -326,7 +281,54 @@ def fixture_sort_data_by_date():
     "description": "Перевод с карты на карту",
     "from": "Maestro 4284341727554246",
     "to": "МИР 1582474475547301"
-  }
-]
+  },
+    {
+      "id": 894961746,
+      "state": "EXECUTED",
+      "date": "2019-08-04T20:17:25.443322",
+      "operationAmount": {
+        "amount": "2523.44",
+        "currency": {
+          "name": "руб.",
+          "code": "RUB"
+        }
+      },
+      "description": "Перевод со счета на счет",
+      "from": "Счет 33721541831646393763",
+      "to": "Счет 68774571780974952778"
+    },
+    {
+      "id": 416017997,
+      "state": "EXECUTED",
+      "date": "2019-05-07T01:32:37.142797",
+      "operationAmount": {
+        "amount": "29033.65",
+        "currency": {
+          "name": "USD",
+          "code": "USD"
+        }
+      },
+      "description": "Перевод с карты на карту",
+      "from": "МИР 4878656375033856",
+      "to": "Maestro 6890749237669619"
+    },
+    {
+      "id": 285353808,
+      "state": "EXECUTED",
+      "date": "2018-08-06T16:22:54.643491",
+      "operationAmount": {
+        "amount": "82946.19",
+        "currency": {
+          "name": "руб.",
+          "code": "RUB"
+        }
+      },
+      "description": "Открытие вклада",
+      "to": "Счет 12189246980267075758"
+    }
+  ]
+
+
+
 
 
