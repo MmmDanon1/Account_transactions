@@ -30,7 +30,6 @@ def mask_number_card(number_card: dict) -> str:
     """
     try:
        sort_numbers_card = number_card["from"]
-       # mask = list(sort_numbers_card)
        sort_numbers_card = sort_numbers_card.split(' ')
        if len(sort_numbers_card) == 2:
            mask = list(sort_numbers_card[-1])
