@@ -30,20 +30,32 @@ def mask_number_card(number_card: dict) -> str:
     """
     try:
        sort_numbers_card = number_card["from"]
-       mask = list(sort_numbers_card)
-       mask[-5] = "* "
-       mask[-6] = "*"
-       mask[-7] = "*"
-       mask[-8] = " *"
-       mask[-9] = "*"
-       mask[-10] = "*"
-       mask[-11] = "*"
-       mask[-12] = " *"
-       mask[-13] = "*"
-       mask[-14] = "*"
-       mask[-15] = "*"
-       mask[-16] = " *"
-       return ("".join(mask))
+       # mask = list(sort_numbers_card)
+       sort_numbers_card = sort_numbers_card.split(' ')
+       mask = list(sort_numbers_card[-1])
+       if len(mask) == 16:
+           mask[-5] = "* "
+           mask[-6] = "*"
+           mask[-7] = "*"
+           mask[-8] = " *"
+           mask[-9] = "*"
+           mask[-10] = "*"
+           mask[-11] = "*"
+           mask[-12] = " *"
+       else:
+           mask[-5] = "* "
+           mask[-6] = "*"
+           mask[-7] = "*"
+           mask[-8] = " *"
+           mask[-9] = "*"
+           mask[-10] = "*"
+           mask[-11] = "*"
+           mask[-12] = " *"
+           mask[-13] = "*"
+           mask[-14] = "*"
+           mask[-15] = "*"
+           mask[-16] = " *"
+       return sort_numbers_card[0] + " " + "".join(mask)
     except:
        return "Номер карты неизвестен"
 
